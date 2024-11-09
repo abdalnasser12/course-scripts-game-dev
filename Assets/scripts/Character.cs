@@ -2,43 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character 
+public class Character
 {
   private string name;
-  private int health ;
-  public string Name 
+  private int health;
+  public string Name
   {
     get
     {
-     return name;
+      return name;
     }
     set
     {
-     name = value;
-     Debug.Log(name);
+      name = value;
+      Debug.Log(name);
     }
-  }  
+  }
   public int Health
   {
     get
     {
-     return health; 
+      return health;
     }
     set
     {
-        if(health>100) 
-        {
-          health = 100;
-        }
-        else if(health<0)
-        {
-            health = 0;
-        }
-        else
-        {
-            health = value;
-        }
-     Debug.Log(health);
+      if (health > 100)
+      {
+        health = 100;
+      }
+      else if (health < 0)
+      {
+        health = 0;
+      }
+      else
+      {
+        health = value;
+      }
+      Debug.Log(health);
     }
+  }
+  public Character(string name, int health)
+  {
+    this.Name = name;
+    this.Health = health;
   }
 }

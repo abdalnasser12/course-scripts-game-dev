@@ -5,25 +5,29 @@ using UnityEngine;
 
 public class Playerr : Character
 {
-   
-  
-    public void Heal(int amount)
+
+
+  public Playerr(string name, int health) : base(name, health)
+  {
+
+  }
+  public void Heal(Playerr player, int amount)
+  {
+    int heal = player.Health + amount;
+    if (heal > 100)
     {
-         int heal = Health  + amount ;
-        if(heal>100) 
-        {
-          heal = 100;
-        }
-        else if(heal<0)
-        {
-          heal = 0;
-        }
-        else
-        {
-           heal= Health + amount ;
-        }
-      Debug.Log(heal);
+      heal = 100;
     }
-    
-    
+    else if (heal < 0)
+    {
+      heal = 0;
+    }
+    else
+    {
+      heal = player.Health + amount;
+    }
+    player.Health = heal;
+    Debug.Log(heal);
+
+  }
 }
