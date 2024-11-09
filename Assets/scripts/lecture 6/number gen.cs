@@ -1,36 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class numbergen : MonoBehaviour
+namespace lecyure6
 {
-    // Start is called before the first frame update
-    void Start()
+
+
+    public class numbergen : MonoBehaviour
     {
-         while (true)
+        // Start is called before the first frame update
+        void Start()
         {
-            int number = Random.Range(1, 21);
-            if (number == 5)
+            while (true)
             {
-                Debug.Log("Continue");
-                continue;
-            }
-            else if (number == 15)
-            {
-                Debug.Log("Break");
-                break;
+                int number = Random.Range(1, 21);
+                if (number == 5)
+                {
+                    Debug.Log("Continue");
+                    continue;
+                }
+                else if (number == 15)
+                {
+                    Debug.Log("Break");
+                    break;
 
+                }
+                else
+                {
+                    Debug.Log(number);
+                }
             }
-            else
-            {
-                Debug.Log(number);
-            }    
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
