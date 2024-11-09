@@ -1,49 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Character
+namespace lecture9
 {
-  private string name;
-  private int health;
-  public string Name
+
+
+  public class Character
   {
-    get
+    private string name;
+    private int health;
+    public string Name
     {
-      return name;
-    }
-    set
-    {
-      name = value;
-      Debug.Log(name);
-    }
-  }
-  public int Health
-  {
-    get
-    {
-      return health;
-    }
-    set
-    {
-      if (health > 100)
+      get
       {
-        health = 100;
+        return name;
       }
-      else if (health < 0)
+      set
       {
-        health = 0;
+        name = value;
+        Debug.Log(name);
       }
-      else
-      {
-        health = value;
-      }
-      Debug.Log(health);
     }
-  }
-  public Character(string name, int health)
-  {
-    this.Name = name;
-    this.Health = health;
+    public int Health
+    {
+      get
+      {
+        return health;
+      }
+      set
+      {
+        if (health > 100)
+        {
+          health = 100;
+        }
+        else if (health < 0)
+        {
+          health = 0;
+        }
+        else
+        {
+          health = value;
+        }
+        Debug.Log(health);
+      }
+    }
+    public Character(string name, int health)
+    {
+      this.Name = name;
+      this.Health = health;
+    }
   }
 }
