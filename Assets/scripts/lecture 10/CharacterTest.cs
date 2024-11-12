@@ -16,8 +16,8 @@ namespace lecture10
         void Start()
         {
             Character[] characters = new Character[2];
-            Soldier soldier = new Soldier("abdalnasser", 100, new Position(1, 5, 6));
-            Officer officer = new Officer("ahmed", 100, new Position(1, 6, 7));
+            Soldier soldier = new Soldier("abdalnasser", 10, new Position(1, 5, 6));
+            Officer officer = new Officer("ahmed", 190, new Position(1, 6, 7));
             characters[0] = soldier;
             characters[1] = officer;
             for (int i = 0; i < characters.Length; i++)
@@ -28,7 +28,7 @@ namespace lecture10
 
 
             Debug.Log(characters[0].Health);
-            officer.Attack(20, characters[0], "fire ball");
+            officer.Attack(5, characters[0], "fire ball");
 
 
 

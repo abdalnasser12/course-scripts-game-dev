@@ -60,8 +60,7 @@ namespace lecture10
             {
                 damage = characterTarget.Health - hit;
             }
-
-            Debug.Log(damage);
+            characterTarget.Health = damage;
             Debug.Log(characterTarget.Health);
 
         }
