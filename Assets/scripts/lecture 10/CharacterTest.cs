@@ -20,15 +20,16 @@ namespace lecture10
             Officer officer = new Officer("ahmed", 100, new Position(1, 6, 7));
             characters[0] = soldier;
             characters[1] = officer;
-            for (int i = 0; i > characters.Length; i++)
+            for (int i = 0; i < characters.Length; i++)
             {
                 characters[i].Displayinfo();
             }
-            
-          
-            Debug.Log(soldierr.Health);
-            officerr.Attack(10, soldierr, "shoot");
-            Debug.Log(soldierr.Health);
+
+
+
+            Debug.Log(characters[0].Health);
+            officer.Attack(20, characters[0], "fire ball");
+
 
 
         }

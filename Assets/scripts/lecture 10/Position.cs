@@ -20,7 +20,7 @@ namespace lecture10
         }
         public void PrintPosition()
         {
-            Debug.Log(x + y + z);
+            Debug.Log($"{x} ; {y} ; {z}");
         }
 
 

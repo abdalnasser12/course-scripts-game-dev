@@ -7,10 +7,11 @@ namespace lecture10
 
     public class Officer : Character
     {
-        public Officer(string officerf, int Healthhh, Position positionnn) : base(officerf, Healthhh, positionnn)
+        public Officer(string Name, int Health, Position positionn) : base(Name, Health, positionn)
         {
 
         }
+      
 
         public override void Displayinfo()
         {

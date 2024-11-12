@@ -9,11 +9,11 @@ namespace lecture10
 
     public class Soldier : Character
     {
-        public Soldier(string officerff, int Healthhhh, Position positionnnn) : base(officerff, Healthhhh, positionnnn)
+        public Soldier(string Name, int Health, Position positionn) : base(Name, Health, positionn)
         {
 
         }
-        
+
         public override void Displayinfo()
         {
             base.Displayinfo();

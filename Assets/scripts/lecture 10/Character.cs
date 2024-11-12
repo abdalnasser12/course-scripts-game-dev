@@ -14,6 +14,7 @@ namespace lecture10
             get { return health; }
             set
             {
+                health = value;
                 if (health >= 100)
                 {
                     health = 100;
@@ -46,7 +47,7 @@ namespace lecture10
         }
         public void Attack(int hit, Character characterTarget)
         {
-            int damage = hit-characterTarget.Health;
+            int damage = characterTarget.Health - hit;
             if (damage >= 100)
             {
                 damage = 100;
@@ -57,18 +58,20 @@ namespace lecture10
             }
             else
             {
-                damage = hit-characterTarget.Health;
+                damage = characterTarget.Health - hit;
             }
-            Debug.Log(characterTarget.name);
+
             Debug.Log(damage);
             Debug.Log(characterTarget.Health);
 
         }
         public void Attack(int hit, Character characterTarget, string attackType)
         {
-            string AttackType = attackType;
+
+
+
             Attack(hit, characterTarget);
-            Debug.Log(AttackType);
+            Debug.Log(attackType);
 
         }
     }
