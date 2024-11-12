@@ -1,15 +1,14 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 namespace lecture10
 {
     public class Character
     {
         public string name;
         private int health;
-        protected Position position = new Position();
+        protected Position position;
         public int Health
         {
             get { return health; }
@@ -35,7 +34,7 @@ namespace lecture10
             this.Health = Healthh;
             this.position = positionn;
         }
-        public Character() : this("no name", 100, new Position(0,0,0))
+        public Character() : this("no name", 100, new Position(0, 0, 0))
         {
 
         }
@@ -47,7 +46,7 @@ namespace lecture10
         }
         public void Attack(int hit, Character characterTarget)
         {
-            int damage = characterTarget.Health - hit;
+            int damage = hit-characterTarget.Health;
             if (damage >= 100)
             {
                 damage = 100;
@@ -58,18 +57,19 @@ namespace lecture10
             }
             else
             {
-                damage = characterTarget.Health - hit;
+                damage = hit-characterTarget.Health;
             }
-          Debug.Log(damage);
-          Debug.Log(characterTarget);
+            Debug.Log(characterTarget.name);
+            Debug.Log(damage);
+            Debug.Log(characterTarget.Health);
 
         }
         public void Attack(int hit, Character characterTarget, string attackType)
         {
-         string  AttackType = attackType;
-         Attack(0,characterTarget);
-         Debug.Log(AttackType);
-         
+            string AttackType = attackType;
+            Attack(hit, characterTarget);
+            Debug.Log(AttackType);
+
         }
     }
 

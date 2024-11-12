@@ -12,17 +12,17 @@ namespace lecture10
         public float x;
         public float y;
         public float z;
-        public Position (float X, float Y, float Z)
+        public Position(float X, float Y, float Z)
         {
             this.x = X;
             this.y = Y;
-           this.z = Z;
+            this.z = Z;
         }
         public void PrintPosition()
         {
-           Debug.Log(x +  y + z);
+            Debug.Log(x + y + z);
         }
 
-       
+
     }
 }

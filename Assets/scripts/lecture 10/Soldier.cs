@@ -7,13 +7,13 @@ namespace lecture10
 {
 
 
-    public abstract class Soldier : Character
+    public class Soldier : Character
     {
-        public Soldier(string Soldier, int Healthh, Position position) : base(Soldier, Healthh, new Position(0, 0, 0))
+        public Soldier(string officerff, int Healthhhh, Position positionnnn) : base(officerff, Healthhhh, positionnnn)
         {
 
         }
-
+        
         public override void Displayinfo()
         {
             base.Displayinfo();
