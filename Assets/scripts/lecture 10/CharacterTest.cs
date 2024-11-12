@@ -22,10 +22,10 @@ namespace lecture10
             characters[1] = officer;
             for (int i = 0; i > characters.Length; i++)
             {
-              characters[i].Displayinfo() ;
+                characters[i].Displayinfo();
             }
-            Soldier soldierr = characters[0];
-            Officer officerr = characters[1];
+            
+          
             Debug.Log(soldierr.Health);
             officerr.Attack(10, soldierr, "shoot");
             Debug.Log(soldierr.Health);
