@@ -13,9 +13,9 @@ namespace lecture10
         {
 
         }
-        public Soldier():base()
+        public Soldier() : base()
         {
-            
+
         }
 
         public override void Displayinfo()
