@@ -16,7 +16,7 @@ namespace lecture10
         void Start()
         {
             Character[] characters = new Character[2];
-            Soldier soldier = new Soldier("abdalnasser", 10, new Position(1, 5, 6));
+            Soldier soldier = new Soldier();
             Officer officer = new Officer("ahmed", 190, new Position(1, 6, 7));
             characters[0] = soldier;
             characters[1] = officer;
