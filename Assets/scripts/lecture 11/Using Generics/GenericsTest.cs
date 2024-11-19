@@ -10,7 +10,7 @@ namespace lecture11
         {
             GameContainer<string> Game = new GameContainer<string>();
             Game.SaveIitem("Healing Potion");
-            Debug.Log($"{GameUtils.DescribeItem("This item is")} {Game.ReturnItem()}");
+            GameUtils.DescribeItem(Game);
 
         }
     }

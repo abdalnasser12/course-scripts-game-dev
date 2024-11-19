@@ -7,9 +7,10 @@ namespace lecture11
     {
 
 
-        public static T DescribeItem<T>(T something)
+        public static void DescribeItem<T>(GameContainer<T> something)
         {
-            return something;
+            Debug.Log($"this item is a {something.ReturnItem()}");
+
         }
     }
 
