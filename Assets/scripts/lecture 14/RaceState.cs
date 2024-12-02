@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum RaceState
+namespace lecture14
 {
-    Start,
-    Accelerate,
-    Turn,
-    Crash,
-    Finish,
+
+
+    public enum RaceState
+    {
+        Start,
+        Accelerate,
+        Turn,
+        Crash,
+        Finish,
+    }
 }
