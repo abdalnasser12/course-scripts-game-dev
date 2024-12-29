@@ -11,11 +11,9 @@ namespace lecture18
             var number = 1;
             var word1 = "odd";
             var word2 = "even";
-            var trueorfalse = true;
-            var oddOrEven = number % 2 == 0 ? word1 : word2;
+            var oddOrEven = number % 2 == 0 ? word2 : word1;
             Debug.Log($"{number} is {oddOrEven}");
             Debug.Log($"{System.DateTime.Now} : {System.DateTime.Now.DayOfWeek}");
-
         }
 
     }
