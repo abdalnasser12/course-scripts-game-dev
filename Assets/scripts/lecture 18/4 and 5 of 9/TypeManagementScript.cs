@@ -9,18 +9,20 @@ namespace lecture18
         {
 
             Cat myCat = new Cat();
-            Animal myAnimal = myCat;
+            Animal upcastedAnimal = myCat;
+            upcastedAnimal.MakeSound();
+            upcastedAnimal.Move();
 
-
-            myAnimal.MakeSound();
-            myAnimal.Move();
-
-            Cat downcastedCat = myAnimal as Cat;
-
+            // Downcasting
+            Cat downcastedCat = upcastedAnimal as Cat;
             if (downcastedCat != null)
             {
                 downcastedCat.MakeSound();
                 downcastedCat.Move();
+            }
+            else
+            {
+                Debug.Log("Downcasting failed.");
             }
 
 
@@ -35,6 +37,7 @@ namespace lecture18
             {
                 fighter.Attack();
 
+
                 if (fighter is Cat)
                 {
                     Debug.Log("The object is a Cat.");
@@ -45,6 +48,6 @@ namespace lecture18
                 }
             }
         }
-    }
 
+    }
 }

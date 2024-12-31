@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace lecture18
 {
-    public class Animal 
+    public class Animal
     {
         public virtual void MakeSound()
         {
             Debug.Log("Animal sound");
         }
 
-        public virtual void Move()
+        public void Move()
         {
             Debug.Log("Animal moves.");
         }
-    }
 
+    }
 }

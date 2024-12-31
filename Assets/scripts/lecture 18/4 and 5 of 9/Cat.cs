@@ -11,12 +11,10 @@ namespace lecture18
             Debug.Log("Meow!");
         }
 
-
-        public override void Move()
+        public new void Move()
         {
             Debug.Log("Cat runs quickly.");
         }
-
 
         public void Attack()
         {
