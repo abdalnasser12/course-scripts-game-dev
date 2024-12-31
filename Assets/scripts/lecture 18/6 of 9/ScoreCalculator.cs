@@ -7,18 +7,19 @@ namespace lecture18
         void Start()
         {
 
+
             int playerScore = 100;
-            int diviser = 0;
+            int divisor = 0;
+
 
             try
             {
-
                 Debug.Log("Attempting to calculate score multiplier...");
 
 
-                int totalScore = playerScore / diviser;
+                int totalScore = playerScore / divisor;
             }
-            catch (DivideByZeroException ex)
+            catch (DivideByZeroException)
             {
 
                 Debug.LogError("Error: Division by zero occurred while calculating score multiplier.");
