@@ -1,8 +1,13 @@
 using UnityEngine;
 namespace lecture18
 {
+
+
     public class UnitySpecificScript : MonoBehaviour
     {
+        private GameObject targetObject;
+        private GameObject jokerObject;
+        private Light lightObject;
 
         void OnEnable()
         {
@@ -18,8 +23,8 @@ namespace lecture18
         {
             print("Game started!");
 
-            
-            GameObject targetObject = GameObject.Find("TargetObject");
+
+            targetObject = GameObject.Find("TargetObject");
             if (targetObject != null)
             {
                 print("Found object by name: " + targetObject.name);
@@ -29,8 +34,8 @@ namespace lecture18
                 print("No TargetObject found.");
             }
 
-            
-            GameObject jokerObject = GameObject.FindGameObjectWithTag("Joker");
+
+            jokerObject = GameObject.FindGameObjectWithTag("Joker");
             if (jokerObject != null)
             {
                 print("Found object by tag: " + jokerObject.name);
@@ -40,8 +45,8 @@ namespace lecture18
                 print("No Joker object found.");
             }
 
-            
-            Light lightObject = GameObject.FindObjectOfType<Light>();
+
+            lightObject = GameObject.FindObjectOfType<Light>();
             if (lightObject != null)
             {
                 print("Found object of type Light: " + lightObject.name);
@@ -54,11 +59,10 @@ namespace lecture18
 
         void Update()
         {
-            
+
             if (Input.GetKeyDown(KeyCode.D))
             {
-                GameObject targetObject = GameObject.Find("TargetObject");
-                if (targetObject != null)
+                if (targetObject != null && targetObject.activeSelf)
                 {
                     targetObject.SetActive(false);
                     print("TargetObject deactivated!");
@@ -66,6 +70,5 @@ namespace lecture18
             }
         }
     }
-
 
 }
