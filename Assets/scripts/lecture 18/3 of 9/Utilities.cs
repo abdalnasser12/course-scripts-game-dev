@@ -8,11 +8,19 @@ namespace lecture18
         public static int Add(params int[] numbers)
         {
             int sum = 0;
-            foreach (int num in numbers)
+            foreach (int number in numbers)
             {
-                sum += num;
+                sum += number;
             }
             return sum;
+        }
+
+
+        public static string RepeatString(this string str, int count)
+        {
+            if (count <= 0) return string.Empty;
+
+            return new string(' ', count).Replace(" ", str);
         }
     }
 }
